@@ -20,39 +20,31 @@ constraint alldifferent([griglia[i,j] | i,j in 1..N]);
 
 solve satisfy;
 
-
-% output che rappresenta i pezzi nell'ordine in cui vengono dati
-% (crescente da sinistra a destra e dall'alto verso il basso)
-output ["\nPEZZI:\n\n"];
-output [concat(j in 1..N)(" -------") ++ "\n" ++
+% output che rappresenta le due scacchiere affiancate, quella dei pezzi iniziale e quella risolta
+output ["\nPEZZI:" ++ concat(i in 1..N)("        ") ++ "SOLUZIONE:\n\n"];
+output [concat(j in 1..N)(" -------") ++ "     " ++ concat(j in 1..N)(" -------") ++ "\n" ++
         % stampo valori in alto
         concat(j in 1..N)("| \\ " ++ 
             "\(pezzi[i*N+j, 2]) " ++ 
+            if j==N then "/ |" else "/ " endif) ++ "    " ++
+        concat(j in 1..N)("| \\ " ++ 
+            "\(pezzi[griglia[i+1,j], 2]) " ++ 
             if j==N then "/ |\n" else "/ " endif) ++ 
         % stampo valori a sinistra e a destra
         concat(j in 1..N)("| " ++ "\(pezzi[i*N+j, 1]) " ++ 
             "X " ++ "\(pezzi[i*N+j, 3]) " ++ 
+            if j==N then "|" else "" endif) ++ "    " ++
+        concat(j in 1..N)("| " ++ "\(pezzi[griglia[i+1,j], 1]) " ++ 
+            "X " ++ "\(pezzi[griglia[i+1,j], 3]) " ++ 
             if j==N then "|\n" else "" endif) ++
         % stampo valori in basso
         concat(j in 1..N)("| / " ++ "\(pezzi[i*N+j, 4]) " ++
+            if j==N then "\\ |" else "\\ " endif) ++ "    " ++
+        concat(j in 1..N)("| / " ++ "\(pezzi[griglia[i+1,j], 4]) " ++
             if j==N then "\\ |\n" else "\\ " endif) ++
-            concat(j in 1..N)(" -------") ++ "\n" ++
+        concat(j in 1..N)(" -------") ++ "     " ++
+        concat(j in 1..N)(" -------") ++ "\n" ++
         if i==N-1 then "\n" else "" endif
         % per ogni riga della griglia
-        | i in 0..N-1];
-
-% output che rappresenta la soluzione
-output ["SOLUZIONE:\n\n"];
-output [concat(j in 1..N)(" -------") ++ "\n" ++
-        concat(j in 1..N)("| \\ " ++ 
-            "\(pezzi[griglia[i,j], 2]) " ++ 
-            if j==N then "/ |\n" else "/ " endif) ++ 
-        concat(j in 1..N)("| " ++ "\(pezzi[griglia[i,j], 1]) " ++ 
-            "X " ++ "\(pezzi[griglia[i,j], 3]) " ++ 
-            if j==N then "|\n" else "" endif) ++
-        concat(j in 1..N)("| / " ++ "\(pezzi[griglia[i,j], 4]) " ++
-            if j==N then "\\ |\n" else "\\ " endif) ++
-            concat(j in 1..N)(" -------") ++ "\n" ++
-        if i==N then "\n" else "" endif
-        | i in 1..N];
+        | i in 0..N-1];  
         
