@@ -16,7 +16,7 @@ assegnando le variabili `N` e `pezzi`, oppure in un file _dataset_ (".dzn")
 separato assegnando i due parametri con la sintassi di Minizinc.
 I valori possono essere forniti anche al momento dell'esecuzione
 attraverso l'interfaccia di Minizinc, ma è altamente sconsigliato.
-Nella cartella dataset sono presenti 8 dataset, due per ciascun valore 
+Nella cartella `dataset` sono presenti 8 dataset, due per ciascun valore 
 di N da 3 a 6.
 ___
 
@@ -29,7 +29,7 @@ ___
 
 ### RIPRODURRE I TEST
 E' possibile riprodurre i test aprendo il programma (file "TETRAVEX.mzn") su software _Minizinc_ 
-e da lì aprire i file con i dati desiderati dalla cartella _dataset_. 
+e da lì aprire i file con i dati desiderati dalla cartella `dataset`. 
 Dopo di chè eseguire il programma.
 ___
 
