@@ -25,7 +25,7 @@ Se il problema è soddisfacibile otterremo 2 "scacchiere", una che rappresenta
 i pezzi nell'ordine dato e una che rappresenta la soluzione.
 Se il problema non è soddisfacibile stamperà `UNSATISFIABLE`.
 Se vengono forniti in input valori sbagliati verrà stampata una stringa di errore.
-__
+___
 
 ### RIPRODURRE I TEST
 E' possibile riprodurre i test aprendo il programma (file "TETRAVEX.mzn") su software _Minizinc_ 
