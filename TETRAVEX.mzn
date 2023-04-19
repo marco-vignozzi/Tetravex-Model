@@ -2,7 +2,7 @@
 
 include "alldifferent.mzn";
 
-int: N;              % altezza e larghezza della griglia
+int: N;              % altezza e larghezza della griglia 
 set of int: range = 1..N*N;    % range di valori da 1 al numero di pezzi, dominio delle variabili
 array[1..N*N, 1..4] of int: pezzi;   % ciascuna riga della matrice rappresenta un pezzo del puzzle
 array[1..N, 1..N] of var range: griglia;  % griglia in cui inserire i pezzi, variabili intere che identificano l'indice di riga del pezzo nella matrice

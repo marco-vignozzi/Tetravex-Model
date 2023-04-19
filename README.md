@@ -1,8 +1,8 @@
 ### INTRODUZIONE
 Il progetto conisiste in un programma ("Tetravex.mzn") che risolve istanze del gioco 
-**Tetravex** per scacchiere NxN e qualsiasi valore.
+**Tetravex** per scacchiere _NxN_ e qualsiasi valore.
 E' inoltre presente una relazione in pdf che spiega i dettagli sul modello utilizzato 
-per definire il problema come CSP.
+per definire il problema come _CSP_.
 ___
 
 ### INPUT
