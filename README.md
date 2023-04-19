@@ -31,4 +31,10 @@ ___
 E' possibile riprodurre i test aprendo il programma (file "TETRAVEX.mzn") su software _Minizinc_ 
 e da lì aprire i file con i dati desiderati dalla cartella _dataset_. 
 Dopo di chè eseguire il programma.
+___
+
+### ESEMPIO
+Ecco l'output del dataset `dati3-1.dzn` come esempio:
+
+![alt text](Esempio.png)
 
